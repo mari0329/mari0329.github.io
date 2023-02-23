@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment2</title>
+	<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADU1NT/29vb/+jo6P/r6+v/29vb/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA29vb/+Dg4P/r6+v/8PDw/+Dg4P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAODg4P/r6+v/8PDw//f39//r6+v/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OD/6+vr//Dw8P/39/f/6+vr/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAofn/GaH5/xmh+f8Z4ODg/+vr6//w8PD/9/f3/+vr6/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAofn/GaH5/xmh+f8Zofn/GeDg4P/r6+v/8PDw//f39//r6+v/ofn/GaH5/xmh+f8ZAAAAAAAAAAAAAAAAAAAAAKH5/xmh+f8Zofn/SaH5/0ng4OD/6+vr//Dw8P/39/f/6+vr/6H5/0mh+f9JAAAAAKH5/xkAAAAAAAAAAAAAAACh+f8Zofn/GaH5/0mh+f9J4ODg/+vr6//w8PD/9/f3/+vr6/+h+f9Jofn/SaH5/xmh+f8ZAAAAAAAAAACh+f8Zofn/GaH5/0mh+f9Jofn/YuDg4P/r6+v/8PDw//f39//r6+v/ofn/YqH5/0mh+f9Jofn/GaH5/xkAAAAAofn/GaH5/xmh+f9Jofn/SaH5/2Kh+f9iofn/xinJ//+h+f/Gofn/YqH5/2Kh+f9Jofn/SaH5/xmh+f8ZAAAAAKH5/xmh+f8Zofn/SaH5/0mh+f9iofn/xqH5/8Ypyf//AO7//6H5/8ah+f9iofn/SaH5/0mh+f8Zofn/GQAAAACh+f8Zofn/GaH5/0mh+f9Jofn/YqH5/8Ypyf//AO7//ynJ//+h+f9iofn/YqH5/0mh+f9Jofn/GaH5/xkAAAAAofn/GaH5/xmh+f9Jofn/SaH5/2Kh+f/GKcn//wDu//8pyf//ofn/xqH5/2Kh+f9Jofn/SaH5/xmh+f8ZAAAAAKH5/xmh+f8Zofn/SaH5/0mh+f9iofn/xinJ//8A7v//Kcn//6H5/8ah+f9iofn/SaH5/0mh+f8Zofn/GQAAAACh+f8Zofn/GaH5/0mh+f9Jofn/YqH5/8YA7v//Kcn//6H5/8ah+f9iofn/YqH5/0mh+f9Jofn/GaH5/xkAAAAAofn/GaH5/xmh+f9Jofn/SaH5/2Kh+f/Gofn/xinJ//+h+f/Gofn/YqH5/2Kh+f9Jofn/SaH5/xmh+f8Z/B8AAPwfAAD8HwAA/B8AAPwfAAD8HwAA/B8AAPwfAAD8HwAA/j8AAPwfAAD8PwAA/B8AAPwfAAD8PwAA/D8AAA==" rel="icon" type="image/x-icon" />
+	<style>
+		body {background-color: floralwhite;}
+		
+		.myDiv {
+		border: 8px outset black;
+		background-color: antiquewhite;    
+		text-align: center;
+		}
+		
+			.wrap {
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		}
+		.col1,
+		.col2 {
+		padding: 10px;
+		text-align: justify;
+		width: calc(50% + 220px);
+		}
+		p {
+		padding: 5px;
+		margin: 0 0 1em;
+		}
+		.col1:before,
+		.col2:before {
+		float: right;
+		width: 1px;
+		height: 90px;
+		content: " ";
+		}
+		.col2:before {
+		float: left;
+		}
+		.img {
+		float: right;
+		clear: right;
+		margin: 20px 0 20px 20px;
+		border-radius: 50%;
+		border-color: floralwhite;
+		border-style: solid;
+		border-width: 10px;
+		shape-outside: circle(50%);
+		}
+		.col2 img {
+		float: left;
+		margin: 20px 20px 20px 0;
+		clear: left;
+		}
+		.col1 .inner {
+		margin-right: 250px;
+		}
+		.col2 .inner {
+		margin-left: 250px;
+		}
+		.col2 {
+		margin-left: -440px;
+		}
+
+		@media screen and (max-width: 800px) {
+		.wrap {
+			display: block;
+		}
+		.col2:before {
+			display: none;
+		}
+		.col1,
+		.col2,
+		.col1 .inner,
+		.col2 .inner {
+			width: auto;
+			margin: 0;
+		}
+		.col2 .img {
+		display: none;
+		}
+		.img {
+			width: 50%;
+			height: auto;
+			min-width: 100px;
+		}
+		}
+		@media screen and (max-width: 480px) {
+		.col1:before {
+			display: none;
+		}
+		}
+		
+		.image1 {
+		 display: block;
+		margin-left: auto;
+		margin-right: auto;
+		opacity: 0.2;
+		position: relative;
+		}
+		.image2 {
+		 display: block;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		left: 50px;
+		}
+		
+		.dashed-line {
+		border: 4px dashed goldenrod;
+		}
+	
+		.grid-container {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: auto auto auto;
+		background-color: floralwhite;
+		padding: 10px;
+		}
+		.grid-item {
+		background-color: rgba(255, 255, 255, 0.8);
+		border: 5px solid rgba(233, 201, 143, 1);
+		padding: 20px;
+		font-size: 30px;
+		text-align: center;
+		}
+		
+	</style>
+</head>
+
+<body>
+	
+	<div class="myDiv">
+		<h1>SHY WOLF CANDLES</h1>
+	</div>
+
+	<div class="wrap">
+		<div class="col1">
+			<img class="img" src="https://www.freepnglogos.com/uploads/moon-png/moon-transparent-png-and-clip-art-images-icons-and-25.png" width="400" height="400" alt="Centred Image">
+			<div class="inner">
+		
+			<p>The strike of a match. The light of a candle. Scent that slowly rises. Shuffling your favourite deck until the moment is right. The draw of the cards. Dropping the needle on your favorite LP. Sweet ritual.</p>
+			<p>With a name inspired by the duality that lives within us all, we believe the small pause that lighting your candle brings is worth honouring; how a small action brings forth a steady, warm light. With fragrance blends as diverse as the folks who burn them, our candles were made for both quiet, sacred moments alone and cozy gatherings with the ones you love most.</p>
+			<p>When Julie Klukas felt a spark of inspiration, she was compelled to fan its flames. We’ve all heard that cry at one time or another, and then it’s up to us to either follow or ignore it. But fire is in Julie’s blood…she worked as a firefighter in her community, and she knows its power. She’s adept at channeling it. She loves rock and roll and she loves pulling tarot, but most of all she loves her pack. Her community. Her world. And she knew it was time to do something for all of them, and for herself.</p>
+			<p>Julie wanted to invite others to explore their own passions and memories. To light a fire, draw down the sacred and go within. But like the leader of a wolf pack, she knew that she had to go first…and that others would follow where she dared to walk. So she stuck out on her own and began the journey that led to Shy Wolf. She was joined by a fellow firefighter who quickly became her right-hand woman, and not long afterwards they were joined by the rest of our pack.</p>
+			<p>Tucked away in the village of Grey Highlands, Ontario, our studio is surrounded by an empire of forest fed by the waters of the Saugeen. Moved by the raw beauty of our surroundings, we hand-pour each candle in the historic building we call home. They’re sustainably crafted with soy wax, cotton wicks, and a custom blend of natural scents inspired by classic rock and the tarot.</p>
+			<p>We invite you to light your favourite candle and retreat into your favourite nook, like a wolf coming home to its den. And just like the wolves, you’ll know when it’s time to tend to your inner fire… and connect to the wilderness within.</p>
+	
+			</div>
+		</div>
+		
+		<div class="col2">
+			<img class="img" src="https://www.freepnglogos.com/uploads/moon-png/moon-transparent-png-and-clip-art-images-icons-and-25.png" width="400" height="400" alt="Centred Image">
+			<div class="inner">
+	  
+			<p><b>The Shy Wolf subscription box.</b></p>
+			<p>Receive an exclusive shy wolf candle fragrance designed just for the subscription box, along with a crystal, a tarot or oracle card from ever-rotating decks, a tealight sample and a love letter from us to you with journal prompts and manifestation rituals for the month ahead.</p>
+			<p><b>The Tarot Collection</b></p>
+			<p>Created and blended with scents inspired by tarot cards, our tarot candles will carry the spiritual meaning of your card of choice every time you ignite the flame and will elevate your self-care ritual, whatever it may be.</p>
+			<p><b>The Vinyl Collection</b></p>
+			<p>Inspired by classic rock, the candles in the vinyl collection are created with scents that will evoke nostalgia and will fit perfectly in the cozy corner in your home where you play your favourite records.</p>
+			<p><b>Your favourite candles… now as incense.</b></p>
+			<p>We’ve taken 14 of our bestselling candle scents and transformed them into long-lasting, high-performing incense sticks. Perfect for meditating, morning journaling, or anywhere else you want a strong scent throw and entrancing, dancing smoke tendrils.</p>
+			<p><b>Sometimes, bigger is better.</b></p>
+			<p>Can’t get enough of your favourite candle? Our 16oz candles are twice the size of our regular candles, with 2 wicks and a stronger scent throw. They’ll last you for 80-85 hours, so no need to ration these babies; you can light them all the time.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div style="position: relative; center: 0; top: 0;">
+		<img src="https://as2.ftcdn.net/v2/jpg/04/84/89/57/1000_F_484895715_xLEjcXsmAW26k2pdEo4WHcersiAqPFEj.jpg" class="image1" width="500" height="500">
+		<img src="https://www.freepnglogos.com/uploads/candle-png/candle-memorials-athlone-printing-26.png" class="image2" width="400" height="400">
+	</div>
+
+	<hr class="dashed-line">  
+	
+	<div class="grid-container">
+		<div class="grid-item" style="font-size:14px"><img src="https://cdn-icons-png.flaticon.com/512/4584/4584591.png" width="70" height="70"><br>Home</br></div>
+		<div class="grid-item" style="font-size:14px"><img src="https://cdn-icons-png.flaticon.com/512/4584/4584406.png" width="70" height="70"><br>Shop</br></div>
+		<div class="grid-item" style="font-size:14px"><img src="https://cdn-icons-png.flaticon.com/512/4584/4584384.png" width="70" height="70"><br>Stockist</br></div>  
+		<div class="grid-item" style="font-size:14px"><img src="https://cdn-icons-png.flaticon.com/512/4584/4584444.png" width="70" height="70"><br>About</br></div>
+		<div class="grid-item" style="font-size:14px"><img src="https://cdn-icons-png.flaticon.com/512/4584/4584450.png" width="70" height="70"><br>Candle Care</br></div>
+		<div class="grid-item" style="font-size:14px"><img src="https://cdn-icons-png.flaticon.com/512/4584/4584547.png" width="70" height="70"><br>Contact</br></div>    
+	</div>
+</body>
+</html>
+	
