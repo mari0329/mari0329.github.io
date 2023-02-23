@@ -3,7 +3,132 @@
 <head>
 	<title>assignment2</title>
 	<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADU1NT/29vb/+jo6P/r6+v/29vb/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA29vb/+Dg4P/r6+v/8PDw/+Dg4P8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAODg4P/r6+v/8PDw//f39//r6+v/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4OD/6+vr//Dw8P/39/f/6+vr/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAofn/GaH5/xmh+f8Z4ODg/+vr6//w8PD/9/f3/+vr6/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAofn/GaH5/xmh+f8Zofn/GeDg4P/r6+v/8PDw//f39//r6+v/ofn/GaH5/xmh+f8ZAAAAAAAAAAAAAAAAAAAAAKH5/xmh+f8Zofn/SaH5/0ng4OD/6+vr//Dw8P/39/f/6+vr/6H5/0mh+f9JAAAAAKH5/xkAAAAAAAAAAAAAAACh+f8Zofn/GaH5/0mh+f9J4ODg/+vr6//w8PD/9/f3/+vr6/+h+f9Jofn/SaH5/xmh+f8ZAAAAAAAAAACh+f8Zofn/GaH5/0mh+f9Jofn/YuDg4P/r6+v/8PDw//f39//r6+v/ofn/YqH5/0mh+f9Jofn/GaH5/xkAAAAAofn/GaH5/xmh+f9Jofn/SaH5/2Kh+f9iofn/xinJ//+h+f/Gofn/YqH5/2Kh+f9Jofn/SaH5/xmh+f8ZAAAAAKH5/xmh+f8Zofn/SaH5/0mh+f9iofn/xqH5/8Ypyf//AO7//6H5/8ah+f9iofn/SaH5/0mh+f8Zofn/GQAAAACh+f8Zofn/GaH5/0mh+f9Jofn/YqH5/8Ypyf//AO7//ynJ//+h+f9iofn/YqH5/0mh+f9Jofn/GaH5/xkAAAAAofn/GaH5/xmh+f9Jofn/SaH5/2Kh+f/GKcn//wDu//8pyf//ofn/xqH5/2Kh+f9Jofn/SaH5/xmh+f8ZAAAAAKH5/xmh+f8Zofn/SaH5/0mh+f9iofn/xinJ//8A7v//Kcn//6H5/8ah+f9iofn/SaH5/0mh+f8Zofn/GQAAAACh+f8Zofn/GaH5/0mh+f9Jofn/YqH5/8YA7v//Kcn//6H5/8ah+f9iofn/YqH5/0mh+f9Jofn/GaH5/xkAAAAAofn/GaH5/xmh+f9Jofn/SaH5/2Kh+f/Gofn/xinJ//+h+f/Gofn/YqH5/2Kh+f9Jofn/SaH5/xmh+f8Z/B8AAPwfAAD8HwAA/B8AAPwfAAD8HwAA/B8AAPwfAAD8HwAA/j8AAPwfAAD8PwAA/B8AAPwfAAD8PwAA/D8AAA==" rel="icon" type="image/x-icon" />
-	<link rel="stylesheet" href="styles.css">
+	<style>
+		body {background-color: floralwhite;}
+		
+		.myDiv {
+		border: 8px outset black;
+		background-color: antiquewhite;    
+		text-align: center;
+		}
+		
+			.wrap {
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+		display: flex;
+		}
+		.col1,
+		.col2 {
+		padding: 10px;
+		text-align: justify;
+		width: calc(50% + 220px);
+		}
+		p {
+		padding: 5px;
+		margin: 0 0 1em;
+		}
+		.col1:before,
+		.col2:before {
+		float: right;
+		width: 1px;
+		height: 90px;
+		content: " ";
+		}
+		.col2:before {
+		float: left;
+		}
+		.img {
+		float: right;
+		clear: right;
+		margin: 20px 0 20px 20px;
+		border-radius: 50%;
+		border-color: floralwhite;
+		border-style: solid;
+		border-width: 10px;
+		shape-outside: circle(50%);
+		}
+		.col2 img {
+		float: left;
+		margin: 20px 20px 20px 0;
+		clear: left;
+		}
+		.col1 .inner {
+		margin-right: 250px;
+		}
+		.col2 .inner {
+		margin-left: 250px;
+		}
+		.col2 {
+		margin-left: -440px;
+		}
+
+		@media screen and (max-width: 800px) {
+		.wrap {
+			display: block;
+		}
+		.col2:before {
+			display: none;
+		}
+		.col1,
+		.col2,
+		.col1 .inner,
+		.col2 .inner {
+			width: auto;
+			margin: 0;
+		}
+		.col2 .img {
+		display: none;
+		}
+		.img {
+			width: 50%;
+			height: auto;
+			min-width: 100px;
+		}
+		}
+		@media screen and (max-width: 480px) {
+		.col1:before {
+			display: none;
+		}
+		}
+		
+		.image1 {
+		 display: block;
+		margin-left: auto;
+		margin-right: auto;
+		opacity: 0.2;
+		position: relative;
+		}
+		.image2 {
+		 display: block;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		left: 50px;
+		}
+		
+		.dashed-line {
+		border: 4px dashed goldenrod;
+		}
+	
+		.grid-container {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: auto auto auto;
+		background-color: floralwhite;
+		padding: 10px;
+		}
+		.grid-item {
+		background-color: rgba(255, 255, 255, 0.8);
+		border: 5px solid rgba(233, 201, 143, 1);
+		padding: 20px;
+		font-size: 30px;
+		text-align: center;
+		}
+		
+	</style>
 </head>
 
 <body>
