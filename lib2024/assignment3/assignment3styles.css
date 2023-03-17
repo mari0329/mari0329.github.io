@@ -1,0 +1,77 @@
+body {
+	background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: palegoldenrod;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+.animated {
+	margin: auto;
+	padding: 26px;
+	height: 160px;
+	vertical-align: middle;
+	opacity: 0.5;
+	background-color: indigo;
+	animation-name: spacey;
+	position: relative;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes spacey {
+	0%   {background-color:indigo;}
+	25%  {background-color:midnightblue;}
+	50%  {background-color:darkslateblue;}
+	75%  {background-color:blueviolet;}
+	100% {background-color:indigo;}
+}
+
+h1 {
+	color: white;
+	background-color: black;
+	opacity: 0.65;
+	border-style: dotted;
+	border-width: 2px;
+	border-radius: 24px;
+	padding: 12px;
+	font-family: Times New Roman, Arial, Helvetica;
+}
+
+h2 {
+	color: palegoldenrod;
+}
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%
+}
