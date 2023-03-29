@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Temperature Conversion Page" content="Free Celsius to Fahrenheit converter">
+	<meta name="keywords" content="Temperature, Converter, Fahrenheit, Celsius">
+	<meta name="author" content="Natalie Marion">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/assignment4styles.css">
+	<link href="https://cdn-icons-png.flaticon.com/512/3653/3653294.png" rel="icon" type="image/x-icon"/>
+	<title>assignment4</title>
+</head>
+<body>
+<h1 class="title">Temperature Conversion Page</h1>
+<img align="left" src="https://cdn.pixabay.com/photo/2022/11/11/02/59/temperature-7584117_960_720.png" alt="Thermometer">
+
+  <div class="card">
+    <p id="message">Enter a number between -90 and 57.</p>
+    <div class="input-container">
+      <input placeholder="15&deg;" type="number" value="" name="degrees" id="number" min="-90" max="57">
+      <button class="btn" id="convert">Convert to Fahrenheit</button>
+      <button class="btn" id="reset" type="reset">Reset</button>
+    </div>
+
+    <div class="result-div" id="result">
+      <i class="fas fa-fire"></i>
+    </div>
+  </div>
+  
+<script src="js/assignment4javascript.js"></script>
+</body>
+</html>

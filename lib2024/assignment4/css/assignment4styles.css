@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2017/06/17/18/13/rainbow-2412987_960_720.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.title,
+.card {
+  color:  Purple;
+  text-shadow: 5px 5px 10px MintCream;
+}
+
+.title {
+    padding: 20px 0;
+    margin: 40px auto 30px;
+    max-width: 40%;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#message {
+    margin: 20px 0 30px;
+}
+
+.card {
+    max-width: 300px;
+    height: 250px;
+    padding: 15px;
+    margin: auto;
+}
+
+.input-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="number"] {
+    width: 20%;
+}
+
+.result-div {
+    margin: 10px 0;
+}
+
+.result-text {
+    margin: 10px;
+}
+
+.fas,
+.far {
+  margin-left: 5px;
+  font-size: 1.3rem;
+}
+
+.fa-fire,
+.fa-burn {
+  color: #ff0000;
+}
+
+.fa-fire {
+  font-size: 3rem;
+}
+
+.fa-sun {
+  color: #ffbf00;
+}
+
+.fa-icicles {
+  color: #00d0ff;
+}
+
+.btn {
+    color: MintCream;
+    padding: 5px;
+    margin: 0 10px;
+    background-color: MediumAquaMarine;
+    cursor: pointer;
+    border: none;
+    border-radius: 10%;
+}
+
+@media (max-width: 500px) {
+    .title {
+      max-width: 300px;
+      font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .title {
+        max-width: 200px;
+        font-size: 1rem;
+    }
+}
+
+img {
+ max-width: 40%;
+ padding: 80px;
+ height: auto;
+}
